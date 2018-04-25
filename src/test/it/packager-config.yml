@@ -13,7 +13,7 @@ plugins:
   - groupId: "org.jenkins-ci.plugins"
     artifactId: "git"
     source:
-      dir: "../../../git"
+      dir: "../../.."
   - groupId: "org.jenkins-ci.plugins"
     artifactId: "junit"
     source:
