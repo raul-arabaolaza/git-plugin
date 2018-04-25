@@ -30,7 +30,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.jenkins.tools.custom-war-packager.demo</groupId>
-    <artifactId>remoting-it</artifactId>
+    <artifactId>git-it</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
@@ -38,8 +38,7 @@
     <properties>
         <custom-war-packager.mvnSettingsFile></custom-war-packager.mvnSettingsFile>
         <custom-war-packager.batchMode>false</custom-war-packager.batchMode>
-        <custom-war-packager.deploySnapshots>true</custom-war-packager.deploySnapshots>
-        <custom-war-packager.deploySnapshotsRepositoryId>cloudbees-internal-snapshots</custom-war-packager.deploySnapshotsRepositoryId>
+        <custom-war-packager.deploySnapshots>false</custom-war-packager.deploySnapshots>
     </properties>
 
     <build>
@@ -62,7 +61,7 @@
             <plugin>
                 <groupId>io.jenkins.tools.custom-war-packager</groupId>
                 <artifactId>custom-war-packager-maven-plugin</artifactId>
-                <version>0.1-alpha-4-20180423.085628-5</version>
+                <version>0.1-alpha-4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -75,7 +74,6 @@
                             <mvnSettingsFile>${custom-war-packager.mvnSettingsFile}</mvnSettingsFile>
                             <batchMode>${custom-war-packager.batchMode}</batchMode>
                             <deploySnapshots>${custom-war-packager.deploySnapshots}</deploySnapshots>
-                            <deploySnapshotsRepositoryId>${custom-war-packager.deploySnapshotsRepositoryId}</deploySnapshotsRepositoryId>
                         </configuration>
                     </execution>
                 </executions>
