@@ -30,3 +30,7 @@ plugins:
     artifactId: "scm-api"
     source:
       version: "2.2.7"
+  - groupId: "org.jenkins-ci.plugins"
+    artifactId: "subversion"
+    source:
+      version: "2.10.5"
