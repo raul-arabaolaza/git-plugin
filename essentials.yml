@@ -1,7 +1,6 @@
 ---
 ath:
   athRevision: "dad333092159cb368efc2f9869572f0a05d255ac"
-  useLocalSnapshots: false
   tests:
     - "GitPluginTest"
     - "GitUserContentTest"
@@ -10,10 +9,5 @@ ath:
     - "WorkflowPluginTest#testSharedLibraryFromGithub"
 pct:
   useLocalSnapshots: false
-  jth:
-    version: 2.38
-    passCustomJenkinsWAR: true
   plugins:
-    - "ssh-slaves"
-    - "command-launcher"
-    - "windows-slaves"
+    - "git"
