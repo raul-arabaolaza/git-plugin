@@ -14,3 +14,7 @@ plugins:
     artifactId: "git"
     source:
       dir: ../../..
+  - groupId: "org.jenkins-ci.plugins"
+      artifactId: "junit"
+      source:
+        version: "1.24"
