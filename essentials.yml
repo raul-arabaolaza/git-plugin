@@ -1,7 +1,7 @@
 ---
 ath:
-  athRevision: "JENKINS-50790-3"
-  athUrl: "https://github.com/raul-arabaolaza/acceptance-test-harness.git"
+  useLocalSnapshots: false
+  jenkins: "2.121-rc15727.3b61b96119b9"
   tests:
     - "GitPluginTest"
     - "GitUserContentTest"
@@ -9,5 +9,58 @@ ath:
     - "WorkflowPluginTest#hello_world_from_git"
     - "WorkflowPluginTest#testSharedLibraryFromGithub"
 pct:
+  useLocalSnapshots: false
   plugins:
     - "git"
+    - "blueocean-git-pipeline"
+    - "blueocean-pipeline-api-impl"
+    - "blueocean-github-pipeline"
+    - "blueocean-events"
+    - "blueocean-bitbucket-pipeline"
+    - "github-branch-source"
+    - "cloudbees-bitbucket-branch-source"
+    - "blueocean-autofavorite"
+    - "github"
+    - "bitbucket"
+    - "gitlab-plugin"
+  jth:
+    version: 2.38
+    passCustomJenkinsWAR: true
+packaging:
+  config:
+    bundle:
+      groupId: "org.jenkins-ci.main"
+      artifactId: "jenkins-core-it"
+      vendor: "Jenkins project"
+      title: "Jenkins Integration Tests WAR"
+      description: "Jenkins WAR for integration tests"
+    war:
+      groupId: "org.jenkins-ci.main"
+      artifactId: "jenkins-war"
+      source:
+        version: "2.107.2"
+    plugins:
+      - groupId: "org.jenkins-ci.plugins"
+        artifactId: "ssh-slaves"
+        source:
+          version: "1.25"
+      - groupId: "org.jenkins-ci.plugins"
+        artifactId: "command-launcher"
+        source:
+          version: "1.2"
+      - groupId: "org.jenkins-ci.plugins"
+        artifactId: "windows-slaves"
+        source:
+          version: "1.3.1"
+      - groupId: "org.jenkins-ci.plugins"
+        artifactId: "credentials"
+        source:
+          version: "2.1.10"
+      - groupId: "org.jenkins-ci.plugins"
+        artifactId: "ssh-credentials"
+        source:
+          version: "1.12"
+      - groupId: "org.jenkins-ci.plugins"
+          artifactId: "blueocean"
+          source:
+            version: "1.5.0"
