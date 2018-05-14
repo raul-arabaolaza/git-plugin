@@ -61,6 +61,6 @@ packaging:
         source:
           version: "1.12"
       - groupId: "org.jenkins-ci.plugins"
-          artifactId: "blueocean"
-          source:
-            version: "1.5.0"
+        artifactId: "blueocean"
+        source:
+          version: "1.5.0"
